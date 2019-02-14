@@ -19,6 +19,7 @@ public class InteractiveFiction {
 
 		// This is the game we're playing.
 		GameWorld game = new SpookyMansion();
+		GameWorld myGame = new FordHall();
 		
 		// This is the current location of the player (initialize as start).
 		// Maybe we'll expand this to a Player object.
@@ -57,7 +58,8 @@ public class InteractiveFiction {
 			// Get the word they typed as lowercase, and no spaces.
 			String action = words.get(0).toLowerCase().trim();
 			
-			if (action.equals("quit")) {
+			// Game over only if user inputs "escape" or "q"
+			if ((action.equals("escape")) || (action.equals("q"))) {
 				if (input.confirm("Are you sure you want to quit?")) {
 					break;
 				} else {
@@ -74,6 +76,7 @@ public class InteractiveFiction {
 				continue;
 			}
 			
+			// Looks out for the case that exitNum is a negative integer or a too-large integer
 			if (exitNum < 0 || exitNum > exits.size()) {
 				System.out.println("I don't know what to do with that number!");
 				continue;
@@ -87,5 +90,4 @@ public class InteractiveFiction {
 		// You get here by "quit" or by reaching a Terminal Place.
 		System.out.println(">>> GAME OVER <<<");
 	}
-
 }

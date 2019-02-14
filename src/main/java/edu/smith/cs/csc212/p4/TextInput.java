@@ -80,7 +80,6 @@ public class TextInput {
 			}
 			// otherwise go around the loop again.
 		}
-
 	}
 
 	/**
@@ -116,6 +115,5 @@ public class TextInput {
 		} else {
 			throw new RuntimeException("Not sure what to do with CLI Args: " + Arrays.toString(args));
 		}
-
 	}
 }

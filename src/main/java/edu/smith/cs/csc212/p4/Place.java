@@ -122,6 +122,5 @@ public class Place {
 			return this.id.equals(((Place) other).id);
 		}
 		return false;
-	}
-	
+	}	
 }

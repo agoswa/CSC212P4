@@ -32,10 +32,8 @@ public class WordSplitter {
 			if (token.isEmpty()) {
 				continue;
 			}
-			
 			words.add(token);
 		}
-		
 		return words;
 	}
 	
@@ -48,5 +46,4 @@ public class WordSplitter {
 				+ "There shouldn't be much here.";
 		System.out.println("words: " + splitTextToWords(testData));
 	}
-
 }
